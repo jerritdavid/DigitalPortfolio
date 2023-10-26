@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>my portfolio</title>
+<style>
+body{
+    font-family: Arial,sans-serif;
+    margin:0;
+    padding:0;
+    background-color:black;
+}
+header{
+    background-color:black;
+    color:#fff;
+    text-align:center;
+    padding:2rem 0;
+    position:relative;
+}
+.header-content h1{
+    font-size:2.5rem;
+    color:lightpink;
+}
+.profile-picture{
+width:170px;
+height:170px;
+border-radius:80%;
+object-fit:cover;
+position: absolute;
+top:10px;
+left:100px;
+
+}
+nav{
+background-color:rgb(175, 168, 168);
+color:#fff;
+text-align:center;
+}
+nav ul{
+list-style-type:none;
+padding:0px;
+}
+nav ul li{
+display: inline;
+margin:0 20px;
+}
+nav ul li a{
+text-decoration:none;
+color:#fff;
+}
+.section-content{
+background-color:lightpink;
+padding:2rem;
+border-radius:20px;
+margin:1rem;
+border-radius: 20px;
+box-shadow:0 0 10px rgba(11, 224, 21, 0.1);
+}
+footer{
+text-align: center;
+padding:1rem 0;
+background-color:#333;
+color:#fff;
+}
+ul{
+list-style-type:disc;
+padding-left:20px;
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="header-content">
+    <img src="jerrit.jpg"alt="Your Profile Picture"class="profile-picture">
+    <h1>JERRIT </h1>
+    <p>UG Final Year Student</p>
+</div>
+</header>
+<nav>
+    <ul>
+<li><a href="#about">About Me</a></li>
+<li><a href="#eduction">Education</a></li>
+<li><a href="#skills">Skills</a></li>
+
+</ul>
+</nav>
+<section id="about">
+<div class="section-content">
+<h2>About Me</h2>
+<p>Hello Everyone! This is Jerrit D and Iam a Computer Science Student.
+    I am an enthusiastic, self-motivated, reliable, responsible and hard working person.
+</p>
+</div>
+</section>
+<section id="eduction">
+    <div class="section-content">
+    <h2>Education</h2>
+    <p>3rd Year Bsc Computer Science-Women's Christian College</p>
+    </div>
+    </section>
+    <section id="skills">
+        <div class="section-content">
+        <h2>My Skills</h2>
+        <ul>
+        <li>C</li>
+        <li>C++</li>
+        <li>Java programming</li>
+        <li>PHP</li>
+        </ul>
+        </div>
+        </section>
+        <footer>
+            <p>&copy;2023jerrit</p>
+        </footer>
+
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+
+anchor.addEventListener('click',function(e){
+
+e.preventDefault();
+
+const targetid = this.getAttribute("href") .substring(1); 
+const targetElement =document.getElementById(targetid);
+
+if (targetElement) {
+    window.scrollTo({ 
+        top:targetElement.offsetTop,
+        behavior: 'smooth'
+});
+}
+});
+});
+</script>
+</body>
+</html>
